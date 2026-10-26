@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Deepak Singh Yadav</title>
+    <meta name="description" content="Register and share your course interests.">
+    <meta name="author" content="Deepak Singh Yadav">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <header>
+        <h1>Register</h1>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="register.html" aria-current="page">Register</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <form>
+            <p>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+            </p>
+            <p>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </p>
+            <p>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" autocomplete="new-password" required>
+            </p>
+            <p>
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+            </p>
+            <p>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </p>
+            <fieldset>
+                <legend>Preferred contact method</legend>
+                <label for="contact-email">
+                    <input type="radio" id="contact-email" name="contact-method" value="email" required>
+                    Email
+                </label>
+                <label for="contact-phone">
+                    <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                    Phone
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Topics of interest</legend>
+                <label for="topic-html">
+                    <input type="checkbox" id="topic-html" name="topics" value="html">
+                    HTML
+                </label>
+                <label for="topic-css">
+                    <input type="checkbox" id="topic-css" name="topics" value="css">
+                    CSS
+                </label>
+                <label for="topic-javascript">
+                    <input type="checkbox" id="topic-javascript" name="topics" value="javascript">
+                    JavaScript
+                </label>
+            </fieldset>
+            <p>
+                <label for="course">Course</label>
+                <select id="course" name="course" required>
+                    <option value="">Select a course</option>
+                    <option value="computer-science">Computer Science</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="data-structures">Data Structures</option>
+                </select>
+            </p>
+            <p>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </p>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2026 Deepak Singh Yadav</p>
+    </footer>
+</body>
+</html>
