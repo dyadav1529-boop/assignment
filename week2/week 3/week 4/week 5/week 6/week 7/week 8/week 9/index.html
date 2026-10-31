@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile-First Responsive Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 16px;
+            background: #f1f5f9;
+            color: #1e293b;
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+        }
+
+        .page {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            margin-bottom: 20px;
+            padding: 24px;
+            border-radius: 12px;
+            background: #1e3a8a;
+            color: #fff;
+        }
+
+        .page-header h1,
+        .page-header p {
+            margin: 0;
+        }
+
+        .page-header p {
+            margin-top: 8px;
+            color: #dbeafe;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .feature {
+            padding: 20px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        .feature img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .feature h2 {
+            margin-top: 0;
+            color: #1d4ed8;
+            font-size: 1.25rem;
+        }
+
+        .feature p {
+            margin-bottom: 0;
+        }
+
+        /* Add a wider two-column layout for tablets. */
+        @media (min-width: 768px) {
+            body {
+                padding: 32px;
+            }
+
+            .feature-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Add a three-column layout for desktop screens. */
+        @media (min-width: 1024px) {
+            .feature-list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <header class="page-header">
+            <h1>Responsive Web Design</h1>
+            <p>This page starts with a mobile layout and adapts at 768px and 1024px.</p>
+        </header>
+        <section class="feature-list" aria-label="Responsive design features">
+            <article class="feature">
+                <img src="https://placehold.co/600x300/dbeafe/1d4ed8?text=Mobile" alt="Mobile phone illustration">
+                <h2>Mobile First</h2>
+                <p>The cards stack in one column on small screens.</p>
+            </article>
+            <article class="feature">
+                <img src="https://placehold.co/600x300/dbeafe/1d4ed8?text=Tablet" alt="Tablet illustration">
+                <h2>Tablet Layout</h2>
+                <p>The cards use two columns from 768px wide.</p>
+            </article>
+            <article class="feature">
+                <img src="https://placehold.co/600x300/dbeafe/1d4ed8?text=Desktop" alt="Desktop computer illustration">
+                <h2>Desktop Layout</h2>
+                <p>The cards use three columns from 1024px wide.</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
+</head>
+<body>
+    
+</body>
+</html>
