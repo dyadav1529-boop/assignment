@@ -120,22 +120,45 @@
         }
 
         .card-row {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 16px;
         }
 
         .course-card {
-            flex: 1 1 200px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
             padding: 20px;
             border: 1px solid #cbd5e1;
             border-radius: 10px;
             background-color: #f8fafc;
         }
 
-        .course-card h3 {
-            margin-top: 0;
+        .course-card__icon {
+            display: grid;
+            flex: 0 0 44px;
+            width: 44px;
+            height: 44px;
+            place-items: center;
+            border-radius: 8px;
+            background-color: #dbeafe;
             color: #1d4ed8;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .course-card__content {
+            min-width: 0;
+        }
+
+        .course-card h3 {
+            margin: 0;
+            color: #1d4ed8;
+        }
+
+        .course-card p {
+            margin-bottom: 0;
         }
 
         @media (max-width: 600px) {
@@ -183,16 +206,25 @@
             <h2>Courses</h2>
             <div class="card-row">
                 <article class="course-card">
-                    <h3>HTML Foundations</h3>
-                    <p>Learn the structure of webpages with HTML.</p>
+                    <span class="course-card__icon" aria-hidden="true">HTML</span>
+                    <div class="course-card__content">
+                        <h3>HTML Foundations</h3>
+                        <p>Learn the structure of webpages with HTML.</p>
+                    </div>
                 </article>
                 <article class="course-card">
-                    <h3>CSS Essentials</h3>
-                    <p>Style pages with colors, spacing, and layouts.</p>
+                    <span class="course-card__icon" aria-hidden="true">CSS</span>
+                    <div class="course-card__content">
+                        <h3>CSS Essentials</h3>
+                        <p>Style pages with colors, spacing, and layouts.</p>
+                    </div>
                 </article>
                 <article class="course-card">
-                    <h3>JavaScript Basics</h3>
-                    <p>Explore programming and interactive webpages.</p>
+                    <span class="course-card__icon" aria-hidden="true">JS</span>
+                    <div class="course-card__content">
+                        <h3>JavaScript Basics</h3>
+                        <p>Explore programming and interactive webpages.</p>
+                    </div>
                 </article>
             </div>
         </section>
