@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 24px;
+            background: #f1f5f9;
+            color: #1e293b;
+            font-family: Arial, sans-serif;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 16px;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .grid-item {
+            padding: 24px;
+            border-radius: 8px;
+            background: #2563eb;
+            color: #fff;
+        }
+
+        .grid-item h1,
+        .grid-item p {
+            margin-top: 0;
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="grid">
+        <section class="grid-item">
+            <h1>CSS Grid</h1>
+            <p>This wider column uses <code>2fr</code> of the available space.</p>
+        </section>
+        <aside class="grid-item">
+            <p>This column uses <code>1fr</code>.</p>
+        </aside>
+        <article class="grid-item">
+            <p>The <code>gap</code> property adds space between grid items.</p>
+        </article>
+        <article class="grid-item">
+            <p>Grid items automatically flow into the defined columns.</p>
+        </article>
+    </main>
+</body>
+</html>
